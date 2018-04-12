@@ -12,14 +12,10 @@ public class AadharBean {
 	private String fatherName;
 	private String photoUrl;
 	private AddressBean permanentAddress;
-	
-	
-	
+
 	public AadharBean() {
 		super();
 	}
-
-
 
 	public AadharBean(String aadharNo, String firstName, String lastName, LocalDate dateOfBirth, String gender,
 			String fatherName, String photoUrl, AddressBean permanentAddress) {
@@ -34,103 +30,69 @@ public class AadharBean {
 		this.permanentAddress = permanentAddress;
 	}
 
-
-
 	public String getAadharNo() {
 		return aadharNo;
 	}
-
-
 
 	public void setAadharNo(String aadharNo) {
 		this.aadharNo = aadharNo;
 	}
 
-
-
 	public String getFirstName() {
 		return firstName;
 	}
-
-
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-
-
 	public String getLastName() {
 		return lastName;
 	}
-
-
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
-
-
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
-
-
 
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
-
-
 	public String getGender() {
 		return gender;
 	}
-
-
 
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
-
-
 	public String getFatherName() {
 		return fatherName;
 	}
-
-
 
 	public void setFatherName(String fatherName) {
 		this.fatherName = fatherName;
 	}
 
-
-
 	public String getPhotoUrl() {
 		return photoUrl;
 	}
-
-
 
 	public void setPhotoUrl(String photoUrl) {
 		this.photoUrl = photoUrl;
 	}
 
-
-
 	public AddressBean getPermanentAddress() {
 		return permanentAddress;
 	}
 
-
-
 	public void setPermanentAddress(AddressBean permanentAddress) {
 		this.permanentAddress = permanentAddress;
 	}
-
-
 
 	@Override
 	public String toString() {
@@ -138,8 +100,5 @@ public class AadharBean {
 				+ ", dateOfBirth=" + dateOfBirth + ", gender=" + gender + ", fatherName=" + fatherName + ", photoUrl="
 				+ photoUrl + ", permanentAddress=" + permanentAddress + "]";
 	}
-	
-	
-	
-	
+
 }
