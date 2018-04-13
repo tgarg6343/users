@@ -1,4 +1,4 @@
-package com.kkd.userdetailsservice.repository.service;
+package com.kkd.userdetailsservice.service;
 
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import com.kkd.userdetailsservice.UserDetailsServiceApplication;
 
 @Service
-public class MessageSender {
+public class MessageSenderService {
 
 	//autowired a template of rabbitmq to send a message
 	@Autowired

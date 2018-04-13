@@ -1,4 +1,4 @@
-package com.kkd.userdetailsservice.repository.service;
+package com.kkd.userdetailsservice.service;
 
 import java.io.BufferedWriter;
 import java.io.File;

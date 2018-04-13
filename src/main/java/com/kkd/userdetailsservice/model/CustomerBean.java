@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
-@Document(collection = "users")
+@Document(collection = "customer")
 @JsonInclude(Include.NON_EMPTY)
 public class CustomerBean {
 

@@ -1,6 +1,7 @@
 package com.kkd.userdetailsservice;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 import org.slf4j.Logger;
@@ -41,7 +42,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableRabbit
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @EnableHystrixDashboard
 @EnableCircuitBreaker
 @EnableSwagger2
@@ -116,6 +117,10 @@ public class UserDetailsServiceApplication implements CommandLineRunner {
 		CustomerBean customerBean = new CustomerBean("kdCustId", "mobileNo", "password", "firstName", null, null, null,
 				false);
 		customerRepository.save(customerBean);
+		
+		CustomerBean customerBean1 = new CustomerBean("hgfjhg", "mobileNo", "password", "firstName", "lastName", Arrays.asList(new AddressBean(132206, "addressLine", "city", "district", "state", false)), null, false);
+		
+		customerRepository.save(customerBean1);
 
 		FarmerBean farmerBean = new FarmerBean("kkd58", "mobileNo", "password", "alternateNo", null, new AddressBean(),
 				null, true, new AadharBean(), false, null);

@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
 
-@Document(collection = "users")
+@Document(collection = "farmer")
 @JsonInclude(Include.NON_NULL)
 public class FarmerBean {
 
