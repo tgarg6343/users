@@ -13,15 +13,10 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 public class CustomerBean {
 
 	@Id
-	@JsonInclude(Include.NON_NULL)
 	private String kkdCustId;
-	@JsonInclude(Include.NON_NULL)
 	private String mobileNo;
-	@JsonInclude(Include.NON_NULL)
 	private String password;
-	@JsonInclude(Include.NON_NULL)
 	private String firstName;
-	@JsonInclude(Include.NON_NULL)
 	private String lastName;
 	private List<AddressBean> addresses;
 	private AddressBean primaryAddress;

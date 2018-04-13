@@ -14,29 +14,24 @@ import com.fasterxml.jackson.databind.annotation.JsonAppend;
 public class FarmerBean {
 
 	@Id
-	@JsonInclude(Include.NON_NULL)
 	private String kkdFarmId;
-	@JsonInclude(Include.NON_NULL)
 	private String mobileNo;
-	@JsonInclude(Include.NON_NULL)
 	private String password;
-	@JsonInclude(Include.NON_NULL)
 	private String alternateNo;
-	@JsonInclude(Include.NON_NULL)
 	private List<String> cities;
-	@JsonInclude(Include.NON_NULL)
 	private AddressBean currentAddress;
 	private String status;
 	private Boolean autoConfirm;
 	private AadharBean aadharData;
-	private Boolean isDeleted;
+	private Boolean deleted;
+	private BankDetailsBean bankDetails;
 
 	public FarmerBean() {
 		super();
 	}
 
 	public FarmerBean(String kkdFarmId, String mobileNo, String password, String alternateNo, List<String> cities,
-			AddressBean currentAddress, String status, Boolean autoConfirm, AadharBean aadharData, Boolean isDeleted) {
+			AddressBean currentAddress, String status, Boolean autoConfirm, AadharBean aadharData, Boolean deleted,BankDetailsBean bankDetails) {
 		super();
 		this.kkdFarmId = kkdFarmId;
 		this.mobileNo = mobileNo;
@@ -47,7 +42,8 @@ public class FarmerBean {
 		this.status = status;
 		this.autoConfirm = autoConfirm;
 		this.aadharData = aadharData;
-		this.isDeleted = isDeleted;
+		this.deleted = deleted;
+		this.bankDetails =bankDetails;
 	}
 
 	public String getKkdFarmId() {
@@ -106,7 +102,7 @@ public class FarmerBean {
 		this.status = status;
 	}
 
-	public Boolean isAutoConfirm() {
+	public Boolean getAutoConfirm() {
 		return autoConfirm;
 	}
 
@@ -122,20 +118,31 @@ public class FarmerBean {
 		this.aadharData = aadharData;
 	}
 
-	public Boolean isDeleted() {
-		return isDeleted;
+	public Boolean getDeleted() {
+		return deleted;
 	}
 
-	public void setDeleted(Boolean isDeleted) {
-		this.isDeleted = isDeleted;
+	public void setDeleted(Boolean deleted) {
+		this.deleted = deleted;
+	}
+
+	public BankDetailsBean getBankDetails() {
+		return bankDetails;
+	}
+
+	public void setBankDetails(BankDetailsBean bankDetails) {
+		this.bankDetails = bankDetails;
 	}
 
 	@Override
 	public String toString() {
 		return "FarmerBean [kkdFarmId=" + kkdFarmId + ", mobileNo=" + mobileNo + ", password=" + password
 				+ ", alternateNo=" + alternateNo + ", cities=" + cities + ", currentAddress=" + currentAddress
-				+ ", status=" + status + ", autoConfirm=" + autoConfirm + ", aadharData=" + aadharData + ", isDeleted="
-				+ isDeleted + "]";
+				+ ", status=" + status + ", autoConfirm=" + autoConfirm + ", aadharData=" + aadharData + ", deleted="
+				+ deleted + ", bankDetails=" + bankDetails + "]";
 	}
+
+	
+
 
 }
